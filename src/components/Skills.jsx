@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import { SKILLS, SOFT_SKILLS } from '../utils/data';
 
 const CATEGORY_COLORS = {
+  'Programming Languages': { bg: 'bg-emerald-500/10', border: 'border-emerald-500/25', text: 'text-emerald-400' },
   Frontend: { bg: 'bg-blue-500/10', border: 'border-blue-500/25', text: 'text-blue-400' },
   Backend:  { bg: 'bg-purple-500/10', border: 'border-purple-500/25', text: 'text-purple-400' },
+  Database: { bg: 'bg-orange-500/10', border: 'border-orange-500/25', text: 'text-orange-400' },
   Tools:    { bg: 'bg-cyan-500/10', border: 'border-cyan-500/25', text: 'text-cyan-400' },
 };
 

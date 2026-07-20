@@ -58,8 +58,19 @@ function ProjectCard({ project, index }) {
         {/* Gradient top stripe */}
         <div className={`h-[3px] bg-gradient-to-r ${project.gradient} opacity-60`} />
 
+        {/* Project Image */}
+        {project.image && (
+          <div className="w-full h-36 sm:h-44 overflow-hidden border-b border-white/[0.05]">
+            <img 
+              src={project.image} 
+              alt={project.title} 
+              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
+            />
+          </div>
+        )}
+
         {/* Card body */}
-        <div className="p-7 flex flex-col flex-1">
+        <div className="p-6 flex flex-col flex-1">
           {/* Tag */}
           <div className="flex items-center gap-2 mb-4">
             <Tag size={13} className="text-blue-400" />
@@ -105,10 +116,11 @@ function ProjectCard({ project, index }) {
               </motion.a>
             ))}
             <motion.a
-              href={PROJECTS[0]?.github || '#'}
+              href={project.github || '#'}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              onClick={(e) => e.preventDefault()}
+              onClick={project.github ? undefined : (e) => e.preventDefault()}
+              target={project.github ? '_blank' : '_self'}
               className="inline-flex items-center gap-2 btn-secondary text-xs py-2.5 px-5"
             >
               <Github size={14} />
@@ -140,7 +152,7 @@ export default function Projects() {
         </motion.div>
 
         {/* Projects grid */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto h-full">
           {PROJECTS.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />
           ))}

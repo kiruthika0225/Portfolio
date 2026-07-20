@@ -5,13 +5,14 @@ import Navbar        from './components/Navbar';
 import HeroSection   from './components/Hero/HeroSection';
 import About         from './components/About';
 import Skills        from './components/Skills';
+import ToolsProductivity from './components/ToolsProductivity';
 import Experience    from './components/Experience';
 import Projects      from './components/Projects';
 import Contact       from './components/Contact';
 import Footer        from './components/Footer';
 import { useScrollReveal } from './hooks/useScrollReveal';
 
-const SECTIONS = ['home', 'about', 'skills', 'experience', 'projects', 'contact'];
+const SECTIONS = ['home', 'about', 'skills', 'tools', 'experience', 'projects', 'contact'];
 
 export default function App() {
   const [loaded,          setLoaded]          = useState(false);
@@ -82,6 +83,7 @@ export default function App() {
             <HeroSection />
             <About />
             <Skills />
+            <ToolsProductivity />
             <Experience />
             <Projects />
             <Contact />
