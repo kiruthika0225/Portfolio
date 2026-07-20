@@ -32,8 +32,29 @@ const TOOLS = [
         <path fill="#FFFFFF" d="M12,15v17h3v-6h4.5c2.481,0,4.5-2.019,4.5-4.5S21.981,15,19.5,15H12z M15,17.5h4.5c0.827,0,1.5,0.673,1.5,1.5s-0.673,1.5-1.5,1.5H15V17.5z"/>
       </svg>
     ),
+  },
+  {
+    name: 'Microsoft Power BI',
+    desc: 'Data Visualization & Reports',
+    color: '#F2C811',
+    bg: 'bg-yellow-500/10',
+    border: 'border-yellow-500/25',
+    svg: (
+      <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10">
+        <rect x="6" y="28" width="8" height="14" rx="1.5" fill="#F2C811"/>
+        <rect x="16" y="20" width="8" height="22" rx="1.5" fill="#E3B505"/>
+        <rect x="26" y="12" width="8" height="30" rx="1.5" fill="#F2C811"/>
+        <rect x="36" y="6" width="8" height="36" rx="1.5" fill="#E3B505"/>
+        <circle cx="10" cy="25" r="3" fill="#ffffff" opacity="0.9"/>
+        <circle cx="20" cy="17" r="3" fill="#ffffff" opacity="0.9"/>
+        <circle cx="30" cy="9" r="3" fill="#ffffff" opacity="0.9"/>
+        <circle cx="40" cy="3" r="3" fill="#ffffff" opacity="0.9"/>
+        <polyline points="10,25 20,17 30,9 40,3" stroke="#ffffff" strokeWidth="1.5" fill="none" opacity="0.7"/>
+      </svg>
+    ),
   }
 ];
+
 
 export default function ToolsProductivity() {
   const containerRef = useRef(null);
