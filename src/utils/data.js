@@ -30,7 +30,7 @@ export const EDUCATION = [
     degree: 'B.Sc. (Computer Science)',
     institution: 'Valliammal College For Women',
     year: '2023 – 2026',
-    grade: '82.5%',
+    grade: '82.8%',
     icon: '🎓',
     current: true,
   },
@@ -169,5 +169,5 @@ export const STATS = [
   { label: 'Projects Built', value: 2, suffix: '+' },
   { label: 'Technologies', value: 6, suffix: '+' },
   { label: 'Internship', value: 1, suffix: '' },
-  { label: 'GPA Score', value: 4.0, suffix: '' },
+  { label: 'GPA Score', value: 82.8, suffix: '%' },
 ];
