@@ -129,9 +129,13 @@ export default function HeroSection() {
               className="relative w-72 h-72 xl:w-80 xl:h-80 rounded-full glass-strong border-2 border-blue-500/25 overflow-hidden shadow-glow-lg flex items-center justify-center"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-blue-800/10" />
-              <div className="flex flex-col items-center gap-3 relative z-10">
-                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-4xl font-heading font-black text-white shadow-glow">
-                  KS
+              <div className="flex flex-col items-center gap-2 relative z-10">
+                <div className="w-36 h-36 xl:w-44 xl:h-44 rounded-2xl overflow-hidden shadow-glow border border-blue-500/20">
+                  <img
+                    src="/java_developer_avatar.png"
+                    alt="Java Developer Avatar"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <div className="text-center px-8">
                   <p className="font-heading font-bold text-white text-xl">{PERSONAL.name}</p>
@@ -139,7 +143,7 @@ export default function HeroSection() {
                     <Zap size={12} /> Java Developer
                   </p>
                   <div className="mt-4 flex gap-2 justify-center flex-wrap">
-                    {['React', 'Java', 'CSS'].map((t) => (
+                    {['Java', 'Spring Boot', 'CSS'].map((t) => (
                       <span key={t} className="text-xs px-2 py-1 rounded-md glass border border-white/10 text-white/60">
                         {t}
                       </span>
