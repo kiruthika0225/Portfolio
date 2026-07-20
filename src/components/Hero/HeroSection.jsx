@@ -4,7 +4,6 @@ import AuroraBackground from './AuroraBackground';
 import ThreeScene from './ThreeScene';
 import TypewriterText from './TypewriterText';
 import { PERSONAL } from '../../utils/data';
-import avatarImg from '../../assets/avatar.png';
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 40 },
@@ -129,26 +128,85 @@ export default function HeroSection() {
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
               className="relative w-72 h-72 xl:w-80 xl:h-80 rounded-full glass-strong border-2 border-blue-500/25 overflow-hidden shadow-glow-lg flex items-center justify-center"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-blue-800/10 z-10" />
-              {/* Avatar fills the full circle */}
-              <img
-                src={avatarImg}
-                alt="Java Developer"
-                className="absolute inset-0 w-full h-full object-cover object-center"
-                style={{ borderRadius: '50%' }}
-              />
-              {/* Name + title overlay at bottom */}
-              <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-[#030712]/90 via-[#030712]/50 to-transparent py-4 px-3 flex flex-col items-center">
-                <p className="font-heading font-bold text-white text-sm leading-tight">{PERSONAL.name}</p>
-                <p className="text-blue-400 text-xs mt-0.5 flex items-center gap-1 justify-center">
-                  <Zap size={10} /> Java Developer
-                </p>
-                <div className="mt-2 flex gap-1.5 justify-center flex-wrap">
-                  {['Java', 'Spring Boot', 'CSS'].map((t) => (
-                    <span key={t} className="text-[10px] px-1.5 py-0.5 rounded-md glass border border-white/10 text-white/60">
-                      {t}
-                    </span>
-                  ))}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-blue-800/10" />
+              <div className="flex flex-col items-center gap-3 relative z-10">
+                {/* Animated doll avatar in small square - same size as KS box */}
+                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#0f172a] to-[#1e3a8a] border border-blue-500/30 shadow-glow flex items-center justify-center overflow-hidden">
+                  <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                    <defs>
+                      <style>{`
+                        @keyframes blink2 { 0%,88%,100%{transform:scaleY(1)} 92%{transform:scaleY(0.08)} }
+                        @keyframes typeL2 { 0%,100%{transform:rotate(0deg)} 50%{transform:rotate(-15deg)} }
+                        @keyframes typeR2 { 0%,100%{transform:rotate(0deg)} 50%{transform:rotate(15deg)} }
+                        @keyframes flicker2 { 0%,100%{opacity:1} 50%{opacity:0.65} }
+                        .el2 { transform-origin: 38px 44px; animation: blink2 3.2s ease-in-out infinite; }
+                        .er2 { transform-origin: 62px 44px; animation: blink2 3.2s ease-in-out infinite; }
+                        .al2 { transform-origin: 28px 72px; animation: typeL2 0.45s ease-in-out infinite; }
+                        .ar2 { transform-origin: 72px 72px; animation: typeR2 0.45s ease-in-out infinite; }
+                        .sc2 { animation: flicker2 2.2s ease-in-out infinite; }
+                      `}</style>
+                    </defs>
+
+                    {/* Laptop base */}
+                    <rect x="15" y="85" width="70" height="6" rx="2" fill="#1e293b" stroke="#3B82F6" strokeWidth="0.6"/>
+                    {/* Laptop screen outer */}
+                    <rect x="20" y="62" width="60" height="26" rx="2" fill="#0f172a" stroke="#3B82F6" strokeWidth="1"/>
+                    {/* Screen content */}
+                    <rect className="sc2" x="23" y="65" width="54" height="20" rx="1" fill="#0d2a6e" opacity="0.9"/>
+                    <rect className="sc2" x="26" y="68" width="22" height="2" rx="1" fill="#60A5FA"/>
+                    <rect className="sc2" x="26" y="72" width="34" height="2" rx="1" fill="#34d399"/>
+                    <rect className="sc2" x="26" y="76" width="16" height="2" rx="1" fill="#f472b6"/>
+                    <rect className="sc2" x="26" y="80" width="28" height="2" rx="1" fill="#60A5FA" opacity="0.7"/>
+
+                    {/* Torso */}
+                    <rect x="34" y="60" width="32" height="22" rx="8" fill="#1d4ed8"/>
+
+                    {/* Neck */}
+                    <rect x="44" y="54" width="12" height="9" rx="4" fill="#fcd9c0"/>
+
+                    {/* Head */}
+                    <ellipse cx="50" cy="38" rx="17" ry="17" fill="#fcd9c0"/>
+
+                    {/* Hair top */}
+                    <ellipse cx="50" cy="23" rx="17" ry="10" fill="#1e293b"/>
+                    {/* Hair sides */}
+                    <ellipse cx="33" cy="39" rx="5" ry="11" fill="#1e293b"/>
+                    <ellipse cx="67" cy="39" rx="5" ry="11" fill="#1e293b"/>
+
+                    {/* Eyes */}
+                    <ellipse className="el2" cx="38" cy="40" rx="4" ry="4.5" fill="white"/>
+                    <ellipse cx="38" cy="41" rx="2.2" ry="2.5" fill="#1d4ed8"/>
+                    <circle cx="39" cy="39.5" r="0.8" fill="white"/>
+                    <ellipse className="er2" cx="62" cy="40" rx="4" ry="4.5" fill="white"/>
+                    <ellipse cx="62" cy="41" rx="2.2" ry="2.5" fill="#1d4ed8"/>
+                    <circle cx="63" cy="39.5" r="0.8" fill="white"/>
+
+                    {/* Nose */}
+                    <ellipse cx="50" cy="46" rx="1.5" ry="1" fill="#f0b89a"/>
+                    {/* Smile */}
+                    <path d="M44 50 Q50 55 56 50" stroke="#c0714e" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+                    {/* Cheeks */}
+                    <ellipse cx="32" cy="47" rx="4.5" ry="3" fill="#fda4af" opacity="0.45"/>
+                    <ellipse cx="68" cy="47" rx="4.5" ry="3" fill="#fda4af" opacity="0.45"/>
+
+                    {/* Arms typing */}
+                    <line className="al2" x1="36" y1="68" x2="24" y2="84" stroke="#fcd9c0" strokeWidth="6" strokeLinecap="round"/>
+                    <line className="ar2" x1="64" y1="68" x2="76" y2="84" stroke="#fcd9c0" strokeWidth="6" strokeLinecap="round"/>
+                  </svg>
+                </div>
+
+                <div className="text-center px-8">
+                  <p className="font-heading font-bold text-white text-xl">{PERSONAL.name}</p>
+                  <p className="text-blue-400 text-sm mt-1 flex items-center gap-1 justify-center">
+                    <Zap size={12} /> Java Developer
+                  </p>
+                  <div className="mt-4 flex gap-2 justify-center flex-wrap">
+                    {['Java', 'Spring Boot', 'CSS'].map((t) => (
+                      <span key={t} className="text-xs px-2 py-1 rounded-md glass border border-white/10 text-white/60">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
