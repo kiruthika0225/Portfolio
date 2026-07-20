@@ -136,7 +136,7 @@ export default function HeroSection() {
                 <div className="text-center px-8">
                   <p className="font-heading font-bold text-white text-xl">{PERSONAL.name}</p>
                   <p className="text-blue-400 text-sm mt-1 flex items-center gap-1 justify-center">
-                    <Zap size={12} /> Full Stack Developer
+                    <Zap size={12} /> Java Developer
                   </p>
                   <div className="mt-4 flex gap-2 justify-center flex-wrap">
                     {['React', 'Java', 'CSS'].map((t) => (

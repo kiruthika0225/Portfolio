@@ -12,7 +12,7 @@ export const PERSONAL = {
     'Continuous Learner',
   ],
   bio1:
-    'I am a dedicated Full Stack Developer specializing in building responsive, high-performance web applications. With a strong foundation in Java and modern frontend technologies like React and JavaScript, I excel at transforming complex problems into elegant, scalable solutions.',
+    'I am a dedicated Java Developer specializing in building responsive, high-performance web applications. With a strong foundation in Java and modern frontend technologies like React and JavaScript, I excel at transforming complex problems into elegant, scalable solutions.',
   bio2:
     'I thrive in collaborative environments and am deeply passionate about writing clean, maintainable code. I am constantly learning and adapting to new technologies, always seeking opportunities to deliver impactful results in a forward-thinking tech workspace.',
   email: 'kiruthikasaravanan08@gmail.com',
