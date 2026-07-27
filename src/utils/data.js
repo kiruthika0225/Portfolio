@@ -18,8 +18,8 @@ export const PERSONAL = {
   languages: 'Tamil, English',
   nationality: 'Indian',
   strength: 'Quick Learner, Highly Adaptable',
-  github: 'https://github.com',
-  linkedin: 'https://linkedin.com',
+  github: 'https://github.com/kiruthika0225',
+  linkedin: 'https://linkedin.com/in/kiruthika-saravanan',
 };
 
 export const EDUCATION = [

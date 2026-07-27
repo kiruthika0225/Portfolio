@@ -5,8 +5,8 @@ import { PERSONAL } from '../utils/data';
 const SOCIAL = [
   { icon: Mail,     href: `mailto:${PERSONAL.email}`,      label: 'Email' },
   { icon: Phone,    href: `tel:${PERSONAL.phone.replace(/\s/g,'')}`, label: 'Phone' },
-  { icon: Github,   href: '#',                              label: 'GitHub' },
-  { icon: Linkedin, href: '#',                              label: 'LinkedIn' },
+  { icon: Github,   href: PERSONAL.github,                    label: 'GitHub',   target: '_blank' },
+  { icon: Linkedin, href: PERSONAL.linkedin,                  label: 'LinkedIn', target: '_blank' },
 ];
 
 export default function Footer() {
@@ -41,14 +41,15 @@ export default function Footer() {
 
           {/* Social icons + Back to top */}
           <div className="flex items-center gap-3">
-            {SOCIAL.map(({ icon: Icon, href, label }) => (
+            {SOCIAL.map(({ icon: Icon, href, label, target }) => (
               <motion.a
                 key={label}
                 href={href}
                 aria-label={label}
+                target={target}
+                rel={target === '_blank' ? 'noopener noreferrer' : undefined}
                 whileHover={{ y: -3, scale: 1.12 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={href === '#' ? (e) => e.preventDefault() : undefined}
                 className="w-9 h-9 rounded-xl glass border border-white/[0.07] flex items-center justify-center text-white/40 hover:text-blue-400 hover:border-blue-500/30 transition-all duration-300"
               >
                 <Icon size={15} />

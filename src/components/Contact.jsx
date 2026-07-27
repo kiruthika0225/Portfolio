@@ -160,8 +160,8 @@ export default function Contact() {
               <p className="text-white/30 text-xs uppercase tracking-widest mb-3">Find Me On</p>
               <div className="flex flex-wrap gap-2 sm:gap-3">
                 {[
-                  { href: PERSONAL.github !== '#' ? PERSONAL.github : null, label: 'GitHub',   icon: '⚡' },
-                  { href: PERSONAL.linkedin !== '#' ? PERSONAL.linkedin : null, label: 'LinkedIn', icon: '💼' },
+                  { href: PERSONAL.github,                label: 'GitHub',   icon: '⚡' },
+                  { href: PERSONAL.linkedin,              label: 'LinkedIn', icon: '💼' },
                   { href: `mailto:${PERSONAL.email}`, label: 'Email', icon: '✉️' },
                 ].map(({ href, label, icon }) => (
                   <motion.a

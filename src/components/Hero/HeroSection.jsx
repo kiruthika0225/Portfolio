@@ -76,7 +76,7 @@ export default function HeroSection() {
           {/* CTA Buttons */}
           <motion.div {...fadeUp(0.55)} className="flex flex-wrap items-center gap-4">
             <motion.a
-              href="/kiruthika_resume.pdf"
+              href="/Portfolio/kiruthika_resume.pdf"
               download="Kiruthika_Saravanan_Resume.pdf"
               className="btn-primary flex items-center gap-2.5 text-base"
               whileHover={{ scale: 1.04 }}
