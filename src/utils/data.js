@@ -55,16 +55,16 @@ export const EDUCATION = [
 export const SKILLS = [
   {
     name: 'Java',
-    level: 'Intermediate',
-    pct: 70,
+    level: 'Basic',
+    pct: 45,
     icon: '☕',
     color: '#007396',
     category: 'Programming Languages',
   },
   {
     name: 'JavaScript',
-    level: 'Intermediate',
-    pct: 70,
+    level: 'Basic',
+    pct: 45,
     icon: '⚡',
     color: '#F7DF1E',
     category: 'Programming Languages',
@@ -85,14 +85,7 @@ export const SKILLS = [
     color: '#264DE4',
     category: 'Frontend',
   },
-  {
-    name: 'Spring Boot',
-    level: 'Intermediate',
-    pct: 65,
-    icon: '🍃',
-    color: '#6DB33F',
-    category: 'Backend',
-  },
+
   {
     name: 'MySQL',
     level: 'Intermediate',

@@ -131,7 +131,7 @@ export default function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-blue-800/10" />
               <div className="flex flex-col items-center gap-3 relative z-10">
                 {/* Animated doll avatar in small square - same size as KS box */}
-                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#0f172a] to-[#1e3a8a] border border-blue-500/30 shadow-glow flex items-center justify-center overflow-hidden">
+                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#0f172a] to-[#1e3a8a] border border-blue-500/30 shadow-glow flex items-center justify-center overflow-hidden">
                   <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                     <defs>
                       <style>{`
