@@ -103,7 +103,7 @@ export default function HeroSection() {
           >
             {[
               { label: 'Projects Built', value: '2+' },
-              { label: 'Technologies', value: '6+' },
+              { label: 'Technologies', value: '5+' },
               { label: 'Internship', value: '1' },
             ].map(({ label, value }) => (
               <div key={label} className="flex flex-col">

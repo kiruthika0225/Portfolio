@@ -157,7 +157,7 @@ export const PROJECTS = [
 
 export const STATS = [
   { label: 'Projects Built', value: 2, suffix: '+' },
-  { label: 'Technologies', value: 6, suffix: '+' },
+  { label: 'Technologies', value: 5, suffix: '+' },
   { label: 'Internship', value: 1, suffix: '' },
   { label: 'GPA Score', value: 82.8, suffix: '%' },
 ];
