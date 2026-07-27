@@ -7,9 +7,6 @@ export const PERSONAL = {
   tagline: 'Open for Opportunities',
   roles: [
     'Java Developer',
-    'Frontend Developer',
-    'Problem Solver',
-    'Continuous Learner',
   ],
   bio1:
     'I am a dedicated Java Developer specializing in building responsive, high-performance web applications. With a strong foundation in Java and modern frontend technologies like React and JavaScript, I excel at transforming complex problems into elegant, scalable solutions.',
