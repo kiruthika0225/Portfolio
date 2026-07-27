@@ -201,7 +201,7 @@ export default function HeroSection() {
                     <Zap size={12} /> Java Developer
                   </p>
                   <div className="mt-4 flex gap-2 justify-center flex-wrap">
-                    {['Java', 'Spring Boot', 'CSS'].map((t) => (
+                    {['Java', 'JavaScript', 'CSS'].map((t) => (
                       <span key={t} className="text-xs px-2 py-1 rounded-md glass border border-white/10 text-white/60">
                         {t}
                       </span>
